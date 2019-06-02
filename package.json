@@ -1,26 +1,20 @@
 {
 	"name": "vs-code-extension-toggle-graphql-validation-directives",
-	"displayName": "vs-code-extension-toggle-graphql-validation-directives",
+	"displayName": "toggle-graphql-validation-directives",
 	"description": "Easily collapse and uncollapse graphql validation directives with a quick command",
 	"version": "0.0.1",
+	"publisher": "zwhitchcox",
 	"engines": {
 		"vscode": "^1.34.0"
 	},
 	"categories": [
 		"Other"
 	],
-	"activationEvents": [
-		"onCommand:extension.toggleGraphqlValidationDirectives"
-	],
 	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "extension.toggleGraphqlValidationDirectives",
-				"title": "Toggle Graphql Validation Directives"
-			}
-		]
-	},
+	"activationEvents": [
+		"onLanguage:graphql"
+	],
+	"repository": "https://github.com/zwhitchcox/vs-code-extension-toggle-graphql-validation-directives",
 	"scripts": {
 		"vscode:prepublish": "yarn run compile",
 		"compile": "tsc -p ./",
